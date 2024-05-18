@@ -2,6 +2,7 @@ import { cn } from '@ai-budget-app/util-shared-classnames';
 import './global.css';
 import { Inter as FontSans } from 'next/font/google';
 import { TooltipProvider } from '@ai-budget-app/ui-shared-tooltip';
+import { FeatureSharedSidebar } from '@ai-budget-app/feature-shared-sidebar';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -26,7 +27,15 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <TooltipProvider>{children}</TooltipProvider>
+        <TooltipProvider>
+          <FeatureSharedSidebar />
+
+          <div className="flex min-h-screen w-full flex-col bg-muted/40">
+            <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+              {children}
+            </div>
+          </div>
+        </TooltipProvider>
       </body>
     </html>
   );

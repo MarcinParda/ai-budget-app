@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ai-budget-app/feature-shared-sidebar": [
+        "domains/shared/feature-shared-sidebar/src/index.ts"
+      ],
+      "@ai-budget-app/feature-shared-sidebar/server": [
+        "domains/shared/feature-shared-sidebar/src/server.ts"
+      ],
       "@ai-budget-app/ui-shared-badge": [
         "domains/shared/ui-shared-badge/src/index.ts"
       ],
@@ -59,7 +65,7 @@
       ],
       "@ai-budget-app/util-shared-classnames": [
         "domains/shared/util-shared-classnames/src/index.ts"
-      ]
+      ],
     }
   },
   "exclude": ["node_modules", "tmp"]
