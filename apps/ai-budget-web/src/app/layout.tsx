@@ -1,6 +1,7 @@
 import { cn } from '@ai-budget-app/util-shared-classnames';
 import './global.css';
 import { Inter as FontSans } from 'next/font/google';
+import { TooltipProvider } from '@ai-budget-app/ui-shared-tooltip';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -25,7 +26,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {children}
+        <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
   );

@@ -20,7 +20,6 @@ import {
   Users2,
 } from 'lucide-react';
 
-// import { Button } from '@/components/ui/button';
 // import {
 //   Card,
 //   CardContent,
@@ -56,11 +55,7 @@ import {
 //   TableRow,
 // } from '@/components/ui/table';
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-// import {
-//   Tooltip,
-//   TooltipContent,
-//   TooltipTrigger,
-// } from '@/components/ui/tooltip';
+
 import { Badge } from '@ai-budget-app/ui-shared-badge';
 import {
   Breadcrumb,
@@ -70,6 +65,12 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@ai-budget-app/ui-shared-breadcrumb';
+import { Button } from '@/components/ui/button';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from '@ai-budget-app/ui-shared-tooltip';
 
 export default function Dashboard() {
   return (
