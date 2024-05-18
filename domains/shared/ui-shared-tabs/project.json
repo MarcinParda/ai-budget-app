@@ -1,0 +1,9 @@
+{
+  "name": "ui-shared-tabs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/ui-shared-tabs/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-shared-tabs --web",
+  "targets": {}
+}

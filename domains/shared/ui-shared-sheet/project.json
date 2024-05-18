@@ -1,0 +1,9 @@
+{
+  "name": "ui-shared-sheet",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/ui-shared-sheet/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-shared-sheet --web",
+  "targets": {}
+}

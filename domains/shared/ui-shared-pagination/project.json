@@ -1,0 +1,9 @@
+{
+  "name": "ui-shared-pagination",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/ui-shared-pagination/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-shared-pagination --web",
+  "targets": {}
+}

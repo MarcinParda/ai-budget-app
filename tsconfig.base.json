@@ -24,6 +24,36 @@
       "@ai-budget-app/ui-shared-breadcrumb": [
         "domains/shared/ui-shared-breadcrumb/src/index.ts"
       ],
+      "@ai-budget-app/ui-shared-button": [
+        "domains/shared/ui-shared-button/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-card": [
+        "domains/shared/ui-shared-card/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-dropdown-menu": [
+        "domains/shared/ui-shared-dropdown-menu/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-input": [
+        "domains/shared/ui-shared-input/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-pagination": [
+        "domains/shared/ui-shared-pagination/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-progress": [
+        "domains/shared/ui-shared-progress/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-separator": [
+        "domains/shared/ui-shared-separator/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-sheet": [
+        "domains/shared/ui-shared-sheet/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-table": [
+        "domains/shared/ui-shared-table/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-tabs": [
+        "domains/shared/ui-shared-tabs/src/index.ts"
+      ],
       "@ai-budget-app/ui-shared-tooltip": [
         "domains/shared/ui-shared-tooltip/src/index.ts"
       ],
