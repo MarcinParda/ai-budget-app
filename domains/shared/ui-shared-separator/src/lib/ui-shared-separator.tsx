@@ -1,14 +1,30 @@
-import styles from './ui-shared-separator.module.css';
+'use client';
 
-/* eslint-disable-next-line */
-export interface UiSharedSeparatorProps {}
+import * as React from 'react';
+import * as SeparatorPrimitive from '@radix-ui/react-separator';
+import { cn } from '@ai-budget-app/util-shared-classnames';
 
-export function UiSharedSeparator(props: UiSharedSeparatorProps) {
-  return (
-    <div className={styles['container']}>
-      <h1>Welcome to UiSharedSeparator!</h1>
-    </div>
-  );
-}
+const Separator = React.forwardRef<
+  React.ElementRef<typeof SeparatorPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof SeparatorPrimitive.Root>
+>(
+  (
+    { className, orientation = 'horizontal', decorative = true, ...props },
+    ref
+  ) => (
+    <SeparatorPrimitive.Root
+      ref={ref}
+      decorative={decorative}
+      orientation={orientation}
+      className={cn(
+        'shrink-0 bg-border',
+        orientation === 'horizontal' ? 'h-[1px] w-full' : 'h-full w-[1px]',
+        className
+      )}
+      {...props}
+    />
+  )
+);
+Separator.displayName = SeparatorPrimitive.Root.displayName;
 
-export default UiSharedSeparator;
+export { Separator };

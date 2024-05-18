@@ -20,41 +20,50 @@ import {
   Users2,
 } from 'lucide-react';
 
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from '@/components/ui/card';
-// import {
-//   DropdownMenu,
-//   DropdownMenuCheckboxItem,
-//   DropdownMenuContent,
-//   DropdownMenuItem,
-//   DropdownMenuLabel,
-//   DropdownMenuSeparator,
-//   DropdownMenuTrigger,
-// } from '@/components/ui/dropdown-menu';
-// import { Input } from '@/components/ui/input';
-// import {
-//   Pagination,
-//   PaginationContent,
-//   PaginationItem,
-// } from '@/components/ui/pagination';
-// import { Progress } from '@/components/ui/progress';
-// import { Separator } from '@/components/ui/separator';
-// import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-// import {
-//   Table,
-//   TableBody,
-//   TableCell,
-//   TableHead,
-//   TableHeader,
-//   TableRow,
-// } from '@/components/ui/table';
-// import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@ai-budget-app/ui-shared-card';
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@ai-budget-app/ui-shared-dropdown-menu';
+import { Input } from '@ai-budget-app/ui-shared-input';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+} from '@ai-budget-app/ui-shared-pagination';
+import { Progress } from '@ai-budget-app/ui-shared-progress';
+import { Separator } from '@ai-budget-app/ui-shared-separator';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from '@ai-budget-app/ui-shared-sheet';
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from '@ai-budget-app/ui-shared-table';
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from '@ai-budget-app/ui-shared-tabs';
 
 import { Badge } from '@ai-budget-app/ui-shared-badge';
 import {
@@ -65,7 +74,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@ai-budget-app/ui-shared-breadcrumb';
-import { Button } from '@/components/ui/button';
+import { Button } from '@ai-budget-app/ui-shared-button';
 import {
   Tooltip,
   TooltipContent,
@@ -75,7 +84,7 @@ import {
 export default function Dashboard() {
   return (
     <div className="flex min-h-screen w-full flex-col bg-muted/40">
-      {/* <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
+      <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
         <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
           <Link
             href="#"
@@ -703,7 +712,7 @@ export default function Dashboard() {
             </Card>
           </div>
         </main>
-      </div> */}
+      </div>
     </div>
   );
 }
