@@ -1,4 +1,11 @@
+import { cn } from '@ai-budget-app/util-shared-classnames';
 import './global.css';
+import { Inter as FontSans } from 'next/font/google';
+
+const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
 
 export const metadata = {
   title: 'Welcome to ai-budget-web',
@@ -12,7 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          fontSans.variable
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

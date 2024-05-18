@@ -1,0 +1,19 @@
+{
+  "name": "util-shared-classnames",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/util-shared-classnames/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/domains/shared/util-shared-classnames",
+        "main": "domains/shared/util-shared-classnames/src/index.ts",
+        "tsConfig": "domains/shared/util-shared-classnames/tsconfig.lib.json",
+        "assets": ["domains/shared/util-shared-classnames/*.md"]
+      }
+    }
+  }
+}

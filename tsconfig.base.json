@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ai-budget-app/ui-shared-badge": [
+        "domains/shared/ui-shared-badge/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-badge/server": [
+        "domains/shared/ui-shared-badge/src/server.ts"
+      ],
+      "@ai-budget-app/util-shared-classnames": [
+        "domains/shared/util-shared-classnames/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
