@@ -20,15 +20,6 @@ import {
   Users2,
 } from 'lucide-react';
 
-// import { Badge } from '@/components/ui/badge';
-// import {
-//   Breadcrumb,
-//   BreadcrumbItem,
-//   BreadcrumbLink,
-//   BreadcrumbList,
-//   BreadcrumbPage,
-//   BreadcrumbSeparator,
-// } from '@/components/ui/breadcrumb';
 // import { Button } from '@/components/ui/button';
 // import {
 //   Card,
@@ -71,6 +62,14 @@ import {
 //   TooltipTrigger,
 // } from '@/components/ui/tooltip';
 import { Badge } from '@ai-budget-app/ui-shared-badge';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from '@ai-budget-app/ui-shared-breadcrumb';
 
 export default function Dashboard() {
   return (
