@@ -1,0 +1,9 @@
+{
+  "name": "feature-shared-header",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/feature-shared-header/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project feature-shared-header --web",
+  "targets": {}
+}
