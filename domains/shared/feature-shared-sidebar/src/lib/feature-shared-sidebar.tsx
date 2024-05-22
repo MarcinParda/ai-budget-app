@@ -2,103 +2,63 @@ import Link from 'next/link';
 import {
   Home,
   LineChart,
+  Mail,
   Package,
   Package2,
   Settings,
   ShoppingCart,
-  Users2,
+  PlusIcon,
 } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from '@ai-budget-app/ui-shared-tooltip';
+import { Button } from '@ai-budget-app/ui-shared-button';
+import { Separator } from '@ai-budget-app/ui-shared-separator';
 
 export function FeatureSharedSidebar() {
   return (
-    <aside className="fixed inset-y-0 left-0 z-10 hidden w-14 flex-col border-r bg-background sm:flex">
-      <nav className="flex flex-col items-center gap-4 px-2 sm:py-5">
-        <Link
-          href="#"
-          className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
-        >
-          <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
-          <span className="sr-only">Acme Inc</span>
+    <aside className="w-48 inset-y-0 left-0 z-10 hidden flex-col border-r bg-background sm:flex">
+      <nav className="flex flex-col justify-start items-center px-2 sm:py-5">
+        <Link className="w-full" href="/dashboard">
+          <Button className="w-full justify-start" variant="link">
+            <Home className="mr-2 h-4 w-4" /> Dashboard
+          </Button>
         </Link>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-            >
-              <Home className="h-5 w-5" />
-              <span className="sr-only">Dashboard</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Dashboard</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-            >
-              <ShoppingCart className="h-5 w-5" />
-              <span className="sr-only">Orders</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Orders</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-            >
-              <Package className="h-5 w-5" />
-              <span className="sr-only">Products</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Products</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-            >
-              <Users2 className="h-5 w-5" />
-              <span className="sr-only">Customers</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Customers</TooltipContent>
-        </Tooltip>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-            >
-              <LineChart className="h-5 w-5" />
-              <span className="sr-only">Analytics</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Analytics</TooltipContent>
-        </Tooltip>
+        <Link className="w-full" href="/dashboard">
+          <Button className="w-full justify-start" variant="link">
+            <Home className="mr-2 h-4 w-4" /> Add transactions
+          </Button>
+        </Link>
+        <Link className="w-full" href="/dashboard">
+          <Button className="w-full justify-start" variant="link">
+            <Home className="mr-2 h-4 w-4" /> Plan transactions
+          </Button>
+        </Link>
+        <Link className="w-full" href="/dashboard">
+          <Button className="w-full justify-start" variant="link">
+            <Home className="mr-2 h-4 w-4" /> Categories
+          </Button>
+        </Link>
+        <Link className="w-full" href="/dashboard">
+          <Button className="w-full justify-start" variant="link">
+            <Home className="mr-2 h-4 w-4" /> Current assets
+          </Button>
+        </Link>
+        <Separator />
+        <Link className="w-full" href="/favorites">
+          <Button className="w-full justify-start" variant="link">
+            <PlusIcon className="mr-2 h-4 w-4" /> Add new link
+          </Button>
+        </Link>
       </nav>
-      <nav className="mt-auto flex flex-col items-center gap-4 px-2 sm:py-5">
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <Link
-              href="#"
-              className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
-            >
-              <Settings className="h-5 w-5" />
-              <span className="sr-only">Settings</span>
-            </Link>
-          </TooltipTrigger>
-          <TooltipContent side="right">Settings</TooltipContent>
-        </Tooltip>
+      <nav className="mt-auto flex flex-col items-center px-2 sm:py-5">
+        <Link className="w-full" href="/setting">
+          <Button className="w-full justify-start" variant="link">
+            <Settings className="mr-2 h-4 w-4" /> Settings
+          </Button>
+        </Link>
       </nav>
     </aside>
   );

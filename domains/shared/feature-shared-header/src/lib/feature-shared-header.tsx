@@ -6,13 +6,14 @@ import {
 } from '@ai-budget-app/ui-shared-sheet';
 import { Button } from '@ai-budget-app/ui-shared-button';
 import {
+  BellIcon,
   Home,
   LineChart,
   Package,
   Package2,
   PanelLeft,
-  Search,
   ShoppingCart,
+  SmileIcon,
   Users2,
 } from 'lucide-react';
 import Link from 'next/link';
@@ -24,7 +25,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@ai-budget-app/ui-shared-breadcrumb';
-import { Input } from '@ai-budget-app/ui-shared-input';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -110,31 +110,41 @@ export function FeatureSharedHeader() {
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button
-            variant="outline"
-            size="icon"
-            className="overflow-hidden rounded-full"
-          >
-            <Image
-              src="/placeholder-user.jpg"
-              width={36}
-              height={36}
-              alt="Avatar"
+      <div className="flex gap-2 items-center">
+        <Button
+          variant="outline"
+          size="icon"
+          className="overflow-hidden rounded-full"
+        >
+          <BellIcon className="h-5 w-5" />
+        </Button>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button
+              variant="outline"
+              size="icon"
               className="overflow-hidden rounded-full"
-            />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuLabel>My Account</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Settings</DropdownMenuItem>
-          <DropdownMenuItem>Support</DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Logout</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+            >
+              <SmileIcon className="h-5 w-5" />
+              {/* <Image
+                src="/placeholder-user.jpg"
+                width={36}
+                height={36}
+                alt="Avatar"
+                className="overflow-hidden rounded-full"
+              /> */}
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Settings</DropdownMenuItem>
+            <DropdownMenuItem>Support</DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Logout</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
     </header>
   );
 }
