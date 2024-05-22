@@ -1,0 +1,19 @@
+{
+  "name": "util-shared-routes",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/util-shared-routes/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/domains/shared/util-shared-routes",
+        "main": "domains/shared/util-shared-routes/src/index.ts",
+        "tsConfig": "domains/shared/util-shared-routes/tsconfig.lib.json",
+        "assets": ["domains/shared/util-shared-routes/*.md"]
+      }
+    }
+  }
+}

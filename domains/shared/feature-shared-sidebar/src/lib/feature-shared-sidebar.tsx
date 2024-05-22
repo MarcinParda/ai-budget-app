@@ -1,6 +1,4 @@
-import Link from 'next/link';
 import {
-  SettingsIcon,
   PlusIcon,
   ArrowLeftRightIcon,
   HomeIcon,
@@ -9,8 +7,8 @@ import {
   WalletIcon,
   PiggyBankIcon,
 } from 'lucide-react';
-import { Button } from '@ai-budget-app/ui-shared-button';
 import { Separator } from '@ai-budget-app/ui-shared-separator';
+import { SidebarNavigationLink } from './components/sidebar-navigation-link';
 
 export function FeatureSharedSidebar() {
   return (
@@ -21,37 +19,19 @@ export function FeatureSharedSidebar() {
       </div>
       <Separator />
       <nav className="flex flex-col justify-start items-center px-2 sm:py-5">
-        <Link className="w-full" href="/dashboard">
-          <Button className="w-full justify-start" variant="link">
-            <HomeIcon className="mr-2 h-4 w-4" /> Dashboard
-          </Button>
-        </Link>
-        <Link className="w-full" href="/dashboard">
-          <Button className="w-full justify-start" variant="link">
-            <ArrowLeftRightIcon className="mr-2 h-4 w-4" /> Add transactions
-          </Button>
-        </Link>
-        <Link className="w-full" href="/dashboard">
-          <Button className="w-full justify-start" variant="link">
-            <NotebookPenIcon className="mr-2 h-4 w-4" /> Plan transactions
-          </Button>
-        </Link>
-        <Link className="w-full" href="/dashboard">
-          <Button className="w-full justify-start" variant="link">
-            <Grid2X2Icon className="mr-2 h-4 w-4" /> Categories
-          </Button>
-        </Link>
-        <Link className="w-full" href="/dashboard">
-          <Button className="w-full justify-start" variant="link">
-            <WalletIcon className="mr-2 h-4 w-4" /> Current assets
-          </Button>
-        </Link>
+        <SidebarNavigationLink route="dashboard" Icon={HomeIcon} />
+        <SidebarNavigationLink
+          route="addTransactions"
+          Icon={ArrowLeftRightIcon}
+        />
+        <SidebarNavigationLink
+          route="planTransactions"
+          Icon={NotebookPenIcon}
+        />
+        <SidebarNavigationLink route="categories" Icon={Grid2X2Icon} />
+        <SidebarNavigationLink route="currentAssets" Icon={WalletIcon} />
         <Separator />
-        <Link className="w-full" href="/favorites">
-          <Button className="w-full justify-start" variant="link">
-            <PlusIcon className="mr-2 h-4 w-4" /> Add new link
-          </Button>
-        </Link>
+        <SidebarNavigationLink route="addNewLink" Icon={PlusIcon} />
       </nav>
     </aside>
   );

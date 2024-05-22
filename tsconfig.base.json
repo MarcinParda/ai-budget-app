@@ -71,6 +71,9 @@
       ],
       "@ai-budget-app/util-shared-classnames": [
         "domains/shared/util-shared-classnames/src/index.ts"
+      ],
+      "@ai-budget-app/util-shared-routes": [
+        "domains/shared/util-shared-routes/src/index.ts"
       ]
     }
   },
