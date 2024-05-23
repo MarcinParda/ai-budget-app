@@ -4,7 +4,6 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@ai-budget-app/ui-shared-card';
@@ -16,7 +15,6 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@ai-budget-app/ui-shared-dropdown-menu';
-import { Progress } from '@ai-budget-app/ui-shared-progress';
 import {
   Table,
   TableBody,

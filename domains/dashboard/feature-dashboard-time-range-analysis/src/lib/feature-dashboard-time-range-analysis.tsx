@@ -10,49 +10,71 @@ import { Progress } from '@ai-budget-app/ui-shared-progress';
 
 export function FeatureDashboardTimeRangeAnalysis() {
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <>
+      Pick time range
       <Card x-chunk="dashboard-05-chunk-1">
         <CardHeader className="pb-2">
-          <CardDescription>This Week</CardDescription>
-          <CardTitle className="text-4xl">$1,329</CardTitle>
+          <CardDescription>Time progress</CardDescription>
+          <CardTitle className="text-4xl">15 Mar 24</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-xs text-muted-foreground pb-1">
-            660PLN/1000PLN
-          </div>
-          <Progress value={50} aria-label="66% spent" />
+          <Progress value={50} aria-label="50% spent" />
         </CardContent>
       </Card>
-      <Card x-chunk="dashboard-05-chunk-2">
-        <CardHeader className="pb-2">
-          <CardDescription>This Month</CardDescription>
-          <CardTitle className="text-4xl">$5,329</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="text-xs text-muted-foreground">
-            +10% from last month
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Progress value={12} aria-label="12% increase" />
-        </CardFooter>
-      </Card>
-      <Card x-chunk="dashboard-05-chunk-2">
-        <CardHeader className="pb-2">
-          <CardDescription>This Month</CardDescription>
-          <CardTitle className="text-4xl">$5,329</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="text-xs text-muted-foreground">
-            +10% from last month
-          </div>
-        </CardContent>
-        <CardFooter>
-          <Progress value={12} aria-label="12% increase" />
-        </CardFooter>
-      </Card>
-    </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <Card x-chunk="dashboard-05-chunk-2">
+          <CardHeader className="pb-2">
+            <CardDescription>Balance</CardDescription>
+            <CardTitle className="text-4xl">+5329zł</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div>Gained: 9349zł</div>
+            <div>Spent: 4020zł</div>
+          </CardContent>
+        </Card>
+        <Card x-chunk="dashboard-05-chunk-3">
+          <CardHeader className="pb-2">
+            <CardDescription>Planned balance</CardDescription>
+            <CardTitle className="text-4xl">+3500zł</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div>Planned gain: 9500zł</div>
+            <div>Planned spent: 6000zł</div>
+          </CardContent>
+        </Card>
+        <Card x-chunk="dashboard-05-chunk-2">
+          <CardHeader className="pb-2">
+            <CardDescription>Spent/Planned</CardDescription>
+            <CardTitle className="text-4xl">4020zł/6000zł</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Progress value={67} aria-label="66% spent" />
+            <div className="text-center pt-4">^ Collapse all categories</div>
+            <div className="pt-4">
+              Food: 480zł/1000zł
+              <Progress value={48} aria-label="66% spent" />
+            </div>
+          </CardContent>
+        </Card>
+        <Card x-chunk="dashboard-05-chunk-2">
+          <CardHeader className="pb-2">
+            <CardDescription>Gained/Planned</CardDescription>
+            <CardTitle className="text-4xl">9349zł/9500zł</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <Progress value={94} aria-label="94% Gained" />
+            <div className="text-center pt-4">^ Collapse all categories</div>
+            <div className="pt-4">
+              Work: 9000zł/9000zł
+              <Progress value={100} aria-label="100% Gained" />
+            </div>
+            <div className="pt-4">
+              Allegro/OLX: 349/500zł
+              <Progress value={70} aria-label="100% Gained" />
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </>
   );
 }
-
-export default FeatureDashboardTimeRangeAnalysis;
