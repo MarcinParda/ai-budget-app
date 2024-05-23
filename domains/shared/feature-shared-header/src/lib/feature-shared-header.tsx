@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import {
   Sheet,
   SheetContent,
@@ -33,8 +32,16 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@ai-budget-app/ui-shared-dropdown-menu';
+import { headers } from 'next/headers';
+import { routes } from '@ai-budget-app/util-shared-routes';
 
 export function FeatureSharedHeader() {
+  const headerList = headers();
+  const pathname = headerList.get('x-current-path');
+  const currentRoute = Object.values(routes).find(
+    (route) => route.url() === pathname
+  );
+
   return (
     <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
       <Sheet>
@@ -91,25 +98,24 @@ export function FeatureSharedHeader() {
           </nav>
         </SheetContent>
       </Sheet>
-      <Breadcrumb className="hidden md:flex">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href="#">Dashboard</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href="#">Orders</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage>Recent Orders</BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      {currentRoute && (
+        <Breadcrumb className="hidden md:flex">
+          <BreadcrumbList>
+            {currentRoute.breadcrumbs.map((breadcrumb, index) => (
+              <>
+                <BreadcrumbItem key={index}>
+                  <BreadcrumbLink asChild>
+                    <Link href={breadcrumb.url}>{breadcrumb.label}</Link>
+                  </BreadcrumbLink>
+                </BreadcrumbItem>
+                {index !== currentRoute.breadcrumbs.length - 1 && (
+                  <BreadcrumbSeparator />
+                )}
+              </>
+            ))}
+          </BreadcrumbList>
+        </Breadcrumb>
+      )}
       <div className="flex gap-2 items-center">
         <Button
           variant="outline"
