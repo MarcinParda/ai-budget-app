@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ai-budget-app/feature-dashboard-time-range-analysis": [
+        "domains/dashboard/feature-dashboard-time-range-analysis/src/index.ts"
+      ],
+      "@ai-budget-app/feature-dashboard-time-range-analysis/server": [
+        "domains/dashboard/feature-dashboard-time-range-analysis/src/server.ts"
+      ],
       "@ai-budget-app/feature-shared-header": [
         "domains/shared/feature-shared-header/src/index.ts"
       ],

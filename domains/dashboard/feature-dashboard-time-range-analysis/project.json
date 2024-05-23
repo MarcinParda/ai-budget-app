@@ -1,0 +1,9 @@
+{
+  "name": "feature-dashboard-time-range-analysis",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/dashboard/feature-dashboard-time-range-analysis/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project feature-dashboard-time-range-analysis --web",
+  "targets": {}
+}
