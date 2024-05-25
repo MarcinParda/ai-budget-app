@@ -1,0 +1,9 @@
+{
+  "name": "ui-shared-month-calendar",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/ui-shared-month-calendar/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-shared-month-calendar --web",
+  "targets": {}
+}

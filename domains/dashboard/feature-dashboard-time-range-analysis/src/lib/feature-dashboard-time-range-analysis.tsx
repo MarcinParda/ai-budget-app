@@ -2,20 +2,24 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from '@ai-budget-app/ui-shared-card';
+import { MonthPicker } from '@ai-budget-app/ui-shared-month-picker';
 import { Progress } from '@ai-budget-app/ui-shared-progress';
+import { format } from 'date-fns';
 
 export function FeatureDashboardTimeRangeAnalysis() {
+  const today = new Date();
   return (
     <>
-      Pick time range
+      <MonthPicker />
       <Card x-chunk="dashboard-05-chunk-1">
         <CardHeader className="pb-2">
           <CardDescription>Time progress</CardDescription>
-          <CardTitle className="text-4xl">15 Mar 24</CardTitle>
+          <CardTitle className="text-4xl">
+            {format(today, 'dd MMMM yyyy')}
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <Progress value={50} aria-label="50% spent" />

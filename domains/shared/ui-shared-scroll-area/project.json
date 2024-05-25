@@ -1,0 +1,9 @@
+{
+  "name": "ui-shared-scroll-area",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/ui-shared-scroll-area/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-shared-scroll-area --web",
+  "targets": {}
+}

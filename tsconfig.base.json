@@ -48,11 +48,17 @@
       "@ai-budget-app/ui-shared-card": [
         "domains/shared/ui-shared-card/src/index.ts"
       ],
+      "@ai-budget-app/ui-shared-date-picker": [
+        "domains/shared/ui-shared-date-picker/src/index.ts"
+      ],
       "@ai-budget-app/ui-shared-dropdown-menu": [
         "domains/shared/ui-shared-dropdown-menu/src/index.ts"
       ],
       "@ai-budget-app/ui-shared-input": [
         "domains/shared/ui-shared-input/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-month-calendar": [
+        "domains/shared/ui-shared-month-calendar/src/index.ts"
       ],
       "@ai-budget-app/ui-shared-month-picker": [
         "domains/shared/ui-shared-month-picker/src/index.ts"
@@ -60,8 +66,17 @@
       "@ai-budget-app/ui-shared-pagination": [
         "domains/shared/ui-shared-pagination/src/index.ts"
       ],
+      "@ai-budget-app/ui-shared-popover": [
+        "domains/shared/ui-shared-popover/src/index.ts"
+      ],
       "@ai-budget-app/ui-shared-progress": [
         "domains/shared/ui-shared-progress/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-scroll-area": [
+        "domains/shared/ui-shared-scroll-area/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-select": [
+        "domains/shared/ui-shared-select/src/index.ts"
       ],
       "@ai-budget-app/ui-shared-separator": [
         "domains/shared/ui-shared-separator/src/index.ts"

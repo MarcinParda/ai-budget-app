@@ -1,0 +1,9 @@
+{
+  "name": "ui-shared-date-picker",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/ui-shared-date-picker/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-shared-date-picker --web",
+  "targets": {}
+}
