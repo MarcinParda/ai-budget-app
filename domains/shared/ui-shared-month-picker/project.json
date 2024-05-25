@@ -1,0 +1,9 @@
+{
+  "name": "ui-shared-month-picker",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/shared/ui-shared-month-picker/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-shared-month-picker --web",
+  "targets": {}
+}

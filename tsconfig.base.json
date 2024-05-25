@@ -54,6 +54,9 @@
       "@ai-budget-app/ui-shared-input": [
         "domains/shared/ui-shared-input/src/index.ts"
       ],
+      "@ai-budget-app/ui-shared-month-picker": [
+        "domains/shared/ui-shared-month-picker/src/index.ts"
+      ],
       "@ai-budget-app/ui-shared-pagination": [
         "domains/shared/ui-shared-pagination/src/index.ts"
       ],
