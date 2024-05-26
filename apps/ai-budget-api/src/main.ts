@@ -1,10 +1,6 @@
-/**
- * This is not a production server yet!
- * This is only a minimal backend to get started.
- */
-
 import express from 'express';
 import * as path from 'path';
+import { usersRoutes } from './routes/users';
 
 const app = express();
 
@@ -13,6 +9,7 @@ app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.get('/api', (req, res) => {
   res.send({ message: 'Welcome to ai-budget-api!' });
 });
+app.use('/api/users', usersRoutes);
 
 const port = process.env.PORT || 3333;
 const server = app.listen(port, () => {
