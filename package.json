@@ -2,7 +2,10 @@
   "name": "@ai-budget-app/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "clear": "ts-node lib/prisma-schema/prisma/clear.ts",
+    "seed": "ts-node lib/prisma-schema/prisma/seed.ts"
+  },
   "private": true,
   "dependencies": {
     "@faker-js/faker": "^8.4.1",
@@ -94,8 +97,5 @@
     "vite-plugin-dts": "~3.8.1",
     "vitest": "^1.3.1",
     "webpack-cli": "^5.1.4"
-  },
-  "prisma": {
-    "seed": "ts-node apps/ai-budget-api/prisma/seed.ts"
   }
 }
