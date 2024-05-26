@@ -19,6 +19,12 @@
           "buildTarget": "ai-budget-api:build:production"
         }
       }
+    },
+    "seed": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "ts-node apps/ai-budget-api/prisma/seed.ts"
+      }
     }
   }
 }

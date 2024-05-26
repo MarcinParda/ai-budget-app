@@ -1,14 +1,5 @@
-import knex from 'knex';
+import { PrismaClient } from '@prisma/client';
 
-const db = knex({
-  client: 'pg',
-  connection: {
-    host: 'localhost',
-    port: 5432,
-    user: 'postgres',
-    password: 'AI_BUDGET',
-    database: 'ai_budget_db',
-  },
-});
+const prisma = new PrismaClient();
 
-export default db;
+export default prisma;

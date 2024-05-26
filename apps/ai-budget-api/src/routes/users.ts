@@ -1,12 +1,12 @@
 import express from 'express';
-import db from '../config/db';
+import prisma from '../config/db';
 
-export const usersRoutes = express.Router();
+export const usersRouter = express.Router();
 
 // GET /api/users
-usersRoutes.get('/', async (req, res) => {
+usersRouter.get('/', async (req, res) => {
   try {
-    const users = await db.select().from('users');
+    const users = await prisma.user.findMany();
     res.json(users);
   } catch (err) {
     console.error(err);
@@ -15,9 +15,11 @@ usersRoutes.get('/', async (req, res) => {
 });
 
 // GET /api/users/:id
-usersRoutes.get('/:id', async (req, res) => {
+usersRouter.get('/:id', async (req, res) => {
   try {
-    const user = await db('users').where('id', req.params.id).first();
+    const user = await prisma.user.findUnique({
+      where: { id: parseInt(req.params.id) },
+    });
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
