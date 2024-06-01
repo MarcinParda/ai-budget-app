@@ -12,7 +12,8 @@ const fontSans = FontSans({
 
 export const metadata = {
   title: 'AI budget',
-  description: 'The AI-Powered Budget Planner app that uses AI to help you manage your finances more effectively.',
+  description:
+    'The AI-Powered Budget Planner app that uses AI to help you manage your finances more effectively.',
 };
 
 export default function RootLayout({
@@ -29,11 +30,15 @@ export default function RootLayout({
         )}
       >
         <TooltipProvider>
-          <FeatureSharedSidebar />
-          <div className="flex flex-1 min-h-screen w-full flex-col bg-muted/40">
-            <div className="flex flex-col sm:gap-4 sm:py-4">
-              <FeatureSharedHeader />
-              {children}
+          <div className="flex flex-col flex-1">
+            <FeatureSharedHeader />
+            <div className="flex">
+              <FeatureSharedSidebar />
+              <div className="flex flex-1 min-h-screen w-full flex-col bg-muted/40">
+                <div className="flex flex-col sm:gap-4 sm:pb-4 sm:pt-5">
+                  {children}
+                </div>
+              </div>
             </div>
           </div>
         </TooltipProvider>

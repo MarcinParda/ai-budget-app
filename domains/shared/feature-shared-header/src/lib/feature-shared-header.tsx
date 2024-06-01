@@ -11,6 +11,7 @@ import {
   Package,
   Package2,
   PanelLeft,
+  PiggyBankIcon,
   ShoppingCart,
   SmileIcon,
   Users2,
@@ -42,7 +43,7 @@ export function FeatureSharedHeader() {
   );
 
   return (
-    <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-4 border-b bg-background px-4 sm:static sm:h-auto sm:border-0 sm:bg-transparent sm:px-6">
+    <header className="sticky top-0 z-30 flex h-14 items-center justify-between gap-4 border-b bg-card sm:h-auto sm:px-6 sm:py-3">
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline" className="sm:hidden">
@@ -98,22 +99,29 @@ export function FeatureSharedHeader() {
         </SheetContent>
       </Sheet>
       {currentRoute && (
-        <Breadcrumb className="hidden md:flex">
-          <BreadcrumbList>
-            {currentRoute.breadcrumbs.map((breadcrumb, index) => (
-              <>
-                <BreadcrumbItem key={index}>
-                  <BreadcrumbLink asChild>
-                    <Link href={breadcrumb.url}>{breadcrumb.label}</Link>
-                  </BreadcrumbLink>
-                </BreadcrumbItem>
-                {index !== currentRoute.breadcrumbs.length - 1 && (
-                  <BreadcrumbSeparator />
-                )}
-              </>
-            ))}
-          </BreadcrumbList>
-        </Breadcrumb>
+        <div className="flex flex-1 gap-4">
+          <PiggyBankIcon className="w-8 h-8" />
+          <Breadcrumb className="hidden md:flex">
+            <BreadcrumbList>
+              {currentRoute.breadcrumbs.map((breadcrumb, index) => (
+                <>
+                  <BreadcrumbItem key={index}>
+                    {breadcrumb.url !== currentRoute.url() ? (
+                      <BreadcrumbLink asChild>
+                        <Link href={breadcrumb.url}>{breadcrumb.label}</Link>
+                      </BreadcrumbLink>
+                    ) : (
+                      <span className="font-bold">{breadcrumb.label}</span>
+                    )}
+                  </BreadcrumbItem>
+                  {index !== currentRoute.breadcrumbs.length - 1 && (
+                    <BreadcrumbSeparator />
+                  )}
+                </>
+              ))}
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
       )}
       <div className="flex gap-2 items-center">
         <Button

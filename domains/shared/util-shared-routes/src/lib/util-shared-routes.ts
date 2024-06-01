@@ -23,7 +23,10 @@ export const routes: Record<Route, RouteData> = {
     pageName: 'Dashboard',
     path: '/dashboard',
     url: () => '/dashboard',
-    breadcrumbs: [{ label: 'Dashboard', url: '/dashboard' }],
+    breadcrumbs: [
+      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Dashboard', url: '/dashboard' },
+    ],
   },
   addTransactions: {
     pageName: 'Add transactions',
@@ -35,24 +38,36 @@ export const routes: Record<Route, RouteData> = {
     pageName: 'Plan transactions',
     path: '/plan-transactions',
     url: () => '/plan-transactions',
-    breadcrumbs: [{ label: 'Plan transactions', url: '/plan-transactions' }],
+    breadcrumbs: [
+      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Plan transactions', url: '/plan-transactions' },
+    ],
   },
   categories: {
     pageName: 'Categories',
     path: '/categories',
     url: () => '/categories',
-    breadcrumbs: [{ label: 'Categories', url: '/categories' }],
+    breadcrumbs: [
+      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Categories', url: '/categories' },
+    ],
   },
   currentAssets: {
     pageName: 'Current assets',
     path: '/current-assets',
     url: () => '/current-assets',
-    breadcrumbs: [{ label: 'Current assets', url: '/current-assets' }],
+    breadcrumbs: [
+      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Current assets', url: '/current-assets' },
+    ],
   },
   addNewLink: {
     pageName: 'Add new link',
     path: '/add-new-link',
     url: () => '/add-new-link',
-    breadcrumbs: [{ label: 'Add new link', url: '/add-new-link' }],
+    breadcrumbs: [
+      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Add new link', url: '/add-new-link' },
+    ],
   },
 };
