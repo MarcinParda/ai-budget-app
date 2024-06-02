@@ -1,0 +1,9 @@
+{
+  "name": "ui-project-card",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "domains/project/ui-project-card/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project ui-project-card --web",
+  "targets": {}
+}
