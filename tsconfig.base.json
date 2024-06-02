@@ -107,6 +107,9 @@
       ],
       "@ai-budget-app/util-shared-routes": [
         "domains/shared/util-shared-routes/src/index.ts"
+      ],
+      "@ai-budget-app/util-project": [
+        "domains/project/util-project/src/index.ts"
       ]
     }
   },

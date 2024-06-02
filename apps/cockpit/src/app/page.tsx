@@ -1,15 +1,18 @@
 import { UiProjectCard } from '@ai-budget-app/ui-project-card';
-import { PiggyBankIcon } from 'lucide-react';
+import { projectList } from '@ai-budget-app/util-project';
 
 export default function Index() {
   return (
     <div className="flex items-center justify-center">
-      <UiProjectCard
-        Icon={PiggyBankIcon}
-        description="A budgeting app that helps you plan & manage your finances with
-              help of AI."
-        title="AI Budget"
-      />
+      {projectList.map((project) => (
+        <UiProjectCard
+          key={project.name}
+          title={project.name}
+          description={project.description}
+          url={project.url}
+          Icon={project.Icon}
+        />
+      ))}
     </div>
   );
 }
