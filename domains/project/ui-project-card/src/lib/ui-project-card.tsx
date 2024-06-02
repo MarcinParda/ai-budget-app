@@ -24,7 +24,7 @@ export function UiProjectCard({
 }: UiProjectCardProps) {
   return (
     <a href={url} className="cursor-pointer">
-      <Card className="w-[350px] transition-all bg-muted hover:bg-background">
+      <Card className="w-[350px] transition-all bg-background hover:bg-muted">
         <CardContent className="py-6">
           <div className="flex gap-5">
             <Icon className="w-10 h-10" />

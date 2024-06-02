@@ -1,6 +1,7 @@
 interface Breadcrumb {
   label: string;
   url: string;
+  isExternalUrl?: true;
 }
 
 interface RouteData {
@@ -24,8 +25,8 @@ export const routes: Record<Route, RouteData> = {
     path: '/dashboard',
     url: () => '/dashboard',
     breadcrumbs: [
-      { label: 'Cockpit', url: '/cockpit' },
-      { label: 'Budget AI', url: '/budget-ai' },
+      { label: 'Cockpit', url: 'http://localhost:3000', isExternalUrl: true },
+      { label: 'Budget AI', url: '/' },
       { label: 'Dashboard', url: '/dashboard' },
     ],
   },
@@ -34,7 +35,7 @@ export const routes: Record<Route, RouteData> = {
     path: '/add-transactions',
     url: () => '/add-transactions',
     breadcrumbs: [
-      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Cockpit', url: 'http://localhost:3000', isExternalUrl: true },
       { label: 'Add transactions', url: '/add-transactions' },
     ],
   },
@@ -43,7 +44,7 @@ export const routes: Record<Route, RouteData> = {
     path: '/plan-transactions',
     url: () => '/plan-transactions',
     breadcrumbs: [
-      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Cockpit', url: 'http://localhost:3000', isExternalUrl: true },
       { label: 'Plan transactions', url: '/plan-transactions' },
     ],
   },
@@ -52,7 +53,7 @@ export const routes: Record<Route, RouteData> = {
     path: '/categories',
     url: () => '/categories',
     breadcrumbs: [
-      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Cockpit', url: 'http://localhost:3000', isExternalUrl: true },
       { label: 'Categories', url: '/categories' },
     ],
   },
@@ -61,7 +62,7 @@ export const routes: Record<Route, RouteData> = {
     path: '/current-assets',
     url: () => '/current-assets',
     breadcrumbs: [
-      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Cockpit', url: 'http://localhost:3000', isExternalUrl: true },
       { label: 'Current assets', url: '/current-assets' },
     ],
   },
@@ -70,7 +71,7 @@ export const routes: Record<Route, RouteData> = {
     path: '/add-new-link',
     url: () => '/add-new-link',
     breadcrumbs: [
-      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Cockpit', url: 'http://localhost:3000', isExternalUrl: true },
       { label: 'Add new link', url: '/add-new-link' },
     ],
   },

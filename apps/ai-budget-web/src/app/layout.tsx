@@ -4,6 +4,7 @@ import { TooltipProvider } from '@ai-budget-app/ui-shared-tooltip';
 import { FeatureSharedSidebar } from '@ai-budget-app/feature-shared-sidebar';
 import { FeatureSharedHeader } from '@ai-budget-app/feature-shared-header';
 import './global.css';
+import { aiBudgetProject } from '@ai-budget-app/util-project';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -31,7 +32,7 @@ export default function RootLayout({
       >
         <TooltipProvider>
           <div className="flex flex-col flex-1">
-            <FeatureSharedHeader />
+            <FeatureSharedHeader project={aiBudgetProject} />
             <div className="flex flex-1">
               <FeatureSharedSidebar />
               <div className="flex flex-1 w-full flex-col bg-muted/40">

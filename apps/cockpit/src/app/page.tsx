@@ -1,10 +1,10 @@
 import { UiProjectCard } from '@ai-budget-app/ui-project-card';
-import { projectList } from '@ai-budget-app/util-project';
+import { projectsListWithoutCockpit } from '@ai-budget-app/util-project';
 
 export default function Index() {
   return (
     <div className="flex items-center justify-center">
-      {projectList.map((project) => (
+      {projectsListWithoutCockpit.map((project) => (
         <UiProjectCard
           key={project.name}
           title={project.name}

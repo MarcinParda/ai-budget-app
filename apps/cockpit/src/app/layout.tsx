@@ -3,6 +3,7 @@ import { Inter as FontSans } from 'next/font/google';
 import { TooltipProvider } from '@ai-budget-app/ui-shared-tooltip';
 import { FeatureSharedHeader } from '@ai-budget-app/feature-shared-header';
 import './global.css';
+import { cockpitProject } from '@ai-budget-app/util-project';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -29,7 +30,7 @@ export default function RootLayout({
       >
         <TooltipProvider>
           <div className="flex flex-col flex-1">
-            <FeatureSharedHeader />
+            <FeatureSharedHeader project={cockpitProject} />
             <div className="flex flex-1 w-full flex-col bg-muted/40">
               <div className="flex flex-col sm:gap-4 sm:pb-4 sm:pt-5">
                 {children}
