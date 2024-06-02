@@ -1,7 +1,7 @@
 {
   "name": "cockpit",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/cockpit/src",
+  "sourceRoot": "apps/cockpit",
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project cockpit --web",

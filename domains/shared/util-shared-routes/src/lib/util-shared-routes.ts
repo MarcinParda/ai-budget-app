@@ -25,6 +25,7 @@ export const routes: Record<Route, RouteData> = {
     url: () => '/dashboard',
     breadcrumbs: [
       { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Budget AI', url: '/budget-ai' },
       { label: 'Dashboard', url: '/dashboard' },
     ],
   },
@@ -32,7 +33,10 @@ export const routes: Record<Route, RouteData> = {
     pageName: 'Add transactions',
     path: '/add-transactions',
     url: () => '/add-transactions',
-    breadcrumbs: [{ label: 'Add transactions', url: '/add-transactions' }],
+    breadcrumbs: [
+      { label: 'Cockpit', url: '/cockpit' },
+      { label: 'Add transactions', url: '/add-transactions' },
+    ],
   },
   planTransactions: {
     pageName: 'Plan transactions',

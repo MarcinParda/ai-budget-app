@@ -99,7 +99,7 @@ export function FeatureSharedHeader() {
         </SheetContent>
       </Sheet>
       {currentRoute && (
-        <div className="flex flex-1 gap-4">
+        <div className="flex gap-4">
           <PiggyBankIcon className="w-8 h-8" />
           <Breadcrumb className="hidden md:flex">
             <BreadcrumbList>
@@ -123,7 +123,7 @@ export function FeatureSharedHeader() {
           </Breadcrumb>
         </div>
       )}
-      <div className="flex gap-2 items-center">
+      <div className="flex flex-1 justify-end gap-2 items-center">
         <Button
           variant="outline"
           size="icon"

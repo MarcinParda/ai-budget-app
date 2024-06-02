@@ -5,7 +5,6 @@ import {
   NotebookPenIcon,
   Grid2X2Icon,
   WalletIcon,
-  PiggyBankIcon,
 } from 'lucide-react';
 import { Separator } from '@ai-budget-app/ui-shared-separator';
 import { SidebarNavigationLink } from './components/sidebar-navigation-link';
