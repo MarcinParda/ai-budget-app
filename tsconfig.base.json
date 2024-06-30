@@ -15,8 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ai-budget-app/*": ["domains/*"],
       "@ai-budget-app/data-access-project": [
         "domains/project/data-access-project/src/index.ts"
+      ],
+      "@ai-budget-app/feature-auth-login-form": [
+        "domains/auth/feature-auth-login-form/src/index.ts"
       ],
       "@ai-budget-app/feature-dashboard-time-range-analysis": [
         "domains/dashboard/feature-dashboard-time-range-analysis/src/index.ts"

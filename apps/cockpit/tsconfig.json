@@ -16,10 +16,7 @@
         "name": "next"
       }
     ],
-    "types": [
-      "jest",
-      "node"
-    ]
+    "types": ["jest", "node"]
   },
   "include": [
     "**/*.ts",
@@ -28,13 +25,11 @@
     "**/*.jsx",
     "../../apps/cockpit/.next/types/**/*.ts",
     "../../dist/apps/cockpit/.next/types/**/*.ts",
+    "../../domains/**/*.ts",
+    "../../domains/**/*.tsx",
+    "../../domains/**/*.css",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules",
-    "jest.config.ts",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ]
+  "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]
 }
