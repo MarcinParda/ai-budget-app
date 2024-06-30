@@ -66,6 +66,9 @@
       "@ai-budget-app/ui-shared-input": [
         "domains/shared/ui-shared-input/src/index.ts"
       ],
+      "@ai-budget-app/ui-shared-label": [
+        "domains/shared/ui-shared-label/src/index.ts"
+      ],
       "@ai-budget-app/ui-shared-month-calendar": [
         "domains/shared/ui-shared-month-calendar/src/index.ts"
       ],
@@ -102,14 +105,14 @@
       "@ai-budget-app/ui-shared-tooltip": [
         "domains/shared/ui-shared-tooltip/src/index.ts"
       ],
+      "@ai-budget-app/util-project": [
+        "domains/project/util-project/src/index.ts"
+      ],
       "@ai-budget-app/util-shared-classnames": [
         "domains/shared/util-shared-classnames/src/index.ts"
       ],
       "@ai-budget-app/util-shared-routes": [
         "domains/shared/util-shared-routes/src/index.ts"
-      ],
-      "@ai-budget-app/util-project": [
-        "domains/project/util-project/src/index.ts"
       ]
     }
   },

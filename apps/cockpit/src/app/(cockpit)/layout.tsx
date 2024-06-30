@@ -2,8 +2,8 @@ import { cn } from '@ai-budget-app/util-shared-classnames';
 import { Inter as FontSans } from 'next/font/google';
 import { TooltipProvider } from '@ai-budget-app/ui-shared-tooltip';
 import { FeatureSharedHeader } from '@ai-budget-app/feature-shared-header';
-import './global.css';
 import { cockpitProject } from '@ai-budget-app/util-project';
+import '../global.css';
 
 const fontSans = FontSans({
   subsets: ['latin'],
