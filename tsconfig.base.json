@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@ai-budget-app/*": ["domains/*"],
+      "@ai-budget-app/data-access-auth": [
+        "domains/auth/data-access-auth/src/index.ts"
+      ],
       "@ai-budget-app/data-access-project": [
         "domains/project/data-access-project/src/index.ts"
       ],
@@ -66,6 +69,9 @@
       ],
       "@ai-budget-app/ui-shared-dropdown-menu": [
         "domains/shared/ui-shared-dropdown-menu/src/index.ts"
+      ],
+      "@ai-budget-app/ui-shared-form": [
+        "domains/shared/ui-shared-form/src/index.ts"
       ],
       "@ai-budget-app/ui-shared-input": [
         "domains/shared/ui-shared-input/src/index.ts"
