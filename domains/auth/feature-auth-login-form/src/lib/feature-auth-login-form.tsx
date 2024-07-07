@@ -13,11 +13,15 @@ import {
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { login } from '@ai-budget-app/auth/data-access-auth/src';
-import { LoginPayload } from '@ai-budget-app/auth/data-access-auth/src/lib/types/login';
-import { loginPayloadSchema } from '@ai-budget-app/auth/data-access-auth/src/lib/schemas/loginPayloadSchema';
+import { useRouter } from 'next/navigation';
+import {
+  loginPayloadSchema,
+  LoginPayload,
+  login,
+} from '@ai-budget-app/util-shared-auth';
 
 export function FeatureAuthLoginForm() {
+  const router = useRouter();
   const form = useForm<LoginPayload>({
     resolver: zodResolver(loginPayloadSchema),
     defaultValues: {
@@ -27,7 +31,12 @@ export function FeatureAuthLoginForm() {
   });
 
   async function loginUser(values: LoginPayload) {
-    const token = await login(values);
+    const result = await login(values);
+    if (result?.error) {
+      form.setError('email', { message: 'Invalid email or password' });
+    } else {
+      router.push('/');
+    }
   }
 
   return (

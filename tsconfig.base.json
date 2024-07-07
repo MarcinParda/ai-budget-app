@@ -16,9 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@ai-budget-app/*": ["domains/*"],
-      "@ai-budget-app/data-access-auth": [
-        "domains/auth/data-access-auth/src/index.ts"
-      ],
       "@ai-budget-app/data-access-project": [
         "domains/project/data-access-project/src/index.ts"
       ],
@@ -117,6 +114,9 @@
       ],
       "@ai-budget-app/util-project": [
         "domains/project/util-project/src/index.ts"
+      ],
+      "@ai-budget-app/util-shared-auth": [
+        "domains/shared/util-shared-auth/src/index.ts"
       ],
       "@ai-budget-app/util-shared-classnames": [
         "domains/shared/util-shared-classnames/src/index.ts"

@@ -1,14 +1,16 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import * as path from 'path';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 
 export default defineConfig({
   root: __dirname,
-  cacheDir: '../../../node_modules/.vite/domains/auth/data-access-auth',
+  cacheDir: '../../../node_modules/.vite/domains/shared/util-shared-auth',
 
   plugins: [
+    react(),
     nxViteTsPaths(),
     dts({
       entryRoot: 'src',
@@ -24,7 +26,7 @@ export default defineConfig({
   // Configuration for building your library.
   // See: https://vitejs.dev/guide/build.html#library-mode
   build: {
-    outDir: '../../../dist/domains/auth/data-access-auth',
+    outDir: '../../../dist/domains/shared/util-shared-auth',
     reportCompressedSize: true,
     commonjsOptions: {
       transformMixedEsModules: true,
@@ -32,7 +34,7 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points.
       entry: 'src/index.ts',
-      name: 'data-access-auth',
+      name: 'util-shared-auth',
       fileName: 'index',
       // Change this to the formats you want to support.
       // Don't forget to update your package.json as well.
@@ -40,21 +42,21 @@ export default defineConfig({
     },
     rollupOptions: {
       // External packages that should not be bundled into your library.
-      external: [],
+      external: ['react', 'react-dom', 'react/jsx-runtime'],
     },
   },
 
   test: {
     globals: true,
     cache: {
-      dir: '../../../node_modules/.vitest/domains/auth/data-access-auth',
+      dir: '../../../node_modules/.vitest/domains/shared/util-shared-auth',
     },
-    environment: 'node',
+    environment: 'jsdom',
     include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
 
     reporters: ['default'],
     coverage: {
-      reportsDirectory: '../../../coverage/domains/auth/data-access-auth',
+      reportsDirectory: '../../../coverage/domains/shared/util-shared-auth',
       provider: 'v8',
     },
   },

@@ -34,6 +34,8 @@ import {
 import { headers } from 'next/headers';
 import { routes } from '@ai-budget-app/util-shared-routes';
 import { Project } from '@ai-budget-app/util-project';
+import { logout } from '@ai-budget-app/shared/util-shared-auth/src';
+import { LogoutMenuItem } from './components/logout-menu-item';
 
 interface FeatureSharedHeaderProps {
   project: Project;
@@ -172,7 +174,7 @@ export function FeatureSharedHeader({ project }: FeatureSharedHeaderProps) {
               <DropdownMenuItem>Settings</DropdownMenuItem>
               <DropdownMenuItem>Support</DropdownMenuItem>
               <DropdownMenuSeparator />
-              <DropdownMenuItem>Logout</DropdownMenuItem>
+              <LogoutMenuItem />
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
