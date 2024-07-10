@@ -1,1 +1,1 @@
-export * from './lib/get-projects';
+export * from './lib/use-projects';

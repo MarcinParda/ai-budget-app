@@ -19,7 +19,9 @@ export async function fetchWithValidation<ResponseData>(
     return parsedData;
   } catch (error) {
     if (error instanceof z.ZodError) {
-      throw new Error('Validation error');
+      throw new Error(
+        'Fetch response data validation error: ' + JSON.stringify(error.errors)
+      );
     }
     throw error;
   }
