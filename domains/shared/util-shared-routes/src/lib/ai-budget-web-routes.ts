@@ -1,17 +1,6 @@
-interface Breadcrumb {
-  label: string;
-  url: string;
-  isExternalUrl?: true;
-}
+import { RouteData } from './types/routes';
 
-interface RouteData {
-  pageName: string;
-  path: string;
-  url: () => string;
-  breadcrumbs: Breadcrumb[];
-}
-
-type Route =
+type AiBudgetRoute =
   | 'dashboard'
   | 'addTransactions'
   | 'planTransactions'
@@ -19,7 +8,7 @@ type Route =
   | 'currentAssets'
   | 'addNewLink';
 
-export const routes: Record<Route, RouteData> = {
+export const aiBudgetWebRoutes: Record<AiBudgetRoute, RouteData> = {
   dashboard: {
     pageName: 'Dashboard',
     path: '/dashboard',

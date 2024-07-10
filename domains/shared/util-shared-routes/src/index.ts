@@ -1,1 +1,2 @@
-export * from './lib/util-shared-routes';
+export * from './lib/ai-budget-web-routes';
+export * from './lib/cockpit-routes';

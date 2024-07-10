@@ -19,6 +19,7 @@ import {
   LoginPayload,
   login,
 } from '@ai-budget-app/util-shared-auth';
+import { cockpitRoutes } from '@ai-budget-app/shared/util-shared-routes/src';
 
 export function FeatureAuthLoginForm() {
   const router = useRouter();
@@ -35,7 +36,7 @@ export function FeatureAuthLoginForm() {
     if (result?.error) {
       form.setError('email', { message: 'Invalid email or password' });
     } else {
-      router.push('/');
+      router.push(cockpitRoutes.projects.path);
     }
   }
 

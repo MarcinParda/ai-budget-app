@@ -32,7 +32,7 @@ import {
   DropdownMenuTrigger,
 } from '@ai-budget-app/ui-shared-dropdown-menu';
 import { headers } from 'next/headers';
-import { routes } from '@ai-budget-app/util-shared-routes';
+import { aiBudgetWebRoutes } from '@ai-budget-app/util-shared-routes';
 import { Project } from '@ai-budget-app/util-project';
 import { logout } from '@ai-budget-app/shared/util-shared-auth/src';
 import { LogoutMenuItem } from './components/logout-menu-item';
@@ -45,7 +45,7 @@ export function FeatureSharedHeader({ project }: FeatureSharedHeaderProps) {
   const { Icon, name } = project;
   const headerList = headers();
   const pathname = headerList.get('x-current-path');
-  const currentRoute = Object.values(routes).find(
+  const currentRoute = Object.values(aiBudgetWebRoutes).find(
     (route) => route.url() === pathname
   );
 
