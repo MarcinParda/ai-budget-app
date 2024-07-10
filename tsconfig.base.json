@@ -115,6 +115,9 @@
       "@ai-budget-app/util-project": [
         "domains/project/util-project/src/index.ts"
       ],
+      "@ai-budget-app/util-shared-api": [
+        "domains/shared/util-shared-api/src/index.ts"
+      ],
       "@ai-budget-app/util-shared-auth": [
         "domains/shared/util-shared-auth/src/index.ts"
       ],
