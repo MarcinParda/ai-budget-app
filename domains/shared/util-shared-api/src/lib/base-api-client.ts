@@ -1,3 +1,4 @@
+import { Session } from 'next-auth';
 import { fetchWithValidation } from './fetch-with-validation';
 import { z } from 'zod';
 
@@ -42,6 +43,20 @@ async function deleteRequest<ResponseData>(
 ) {
   return fetchWithValidation(`${API_BASE_URL}${endpoint}`, responseDataSchema, {
     method: 'DELETE',
+  });
+}
+
+async function authenticatedGetRequest<ResponseData>(
+  endpoint: string,
+  responseDataSchema: z.ZodType<ResponseData>,
+  session: Session
+) {
+  return fetchWithValidation(`${API_BASE_URL}${endpoint}`, responseDataSchema, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: session?.accessToken,
+    },
   });
 }
 
